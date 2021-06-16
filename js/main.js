@@ -1,6 +1,3 @@
-<script type="text/javascript" src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
-
-<script>
 var rotadexIndex = 1;
 $(document).ready(function() {
 	$('#fullpage').fullpage({
@@ -208,8 +205,7 @@ module.exports = computedStyle;
 
 },{}]},{},[1])(1)
 });
-</script>
-<script>
+
 (function(){
 
   var addEvent = function (el, type, fn) {
@@ -258,17 +254,3 @@ module.exports = computedStyle;
     return el;
   };
 })();
-</script>
-<script>
-$(document).ready(function() {
-  document.getElementById('menu').addEventListener("click", function(){
-  	this.classList.toggle('active-menu');
-  });
-  var menuItems = document.getElementsByClassName('menu-link');
-  for (var item = 0; item < menuItems.length; item++) {
-  	menuItems[item].addEventListener("click", function(){
-  	document.getElementById('menu').classList.toggle('active-menu');
-  });
-  }
-});
-</script>
