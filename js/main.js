@@ -15,21 +15,18 @@ $(document).ready(function() {
 
 		switch(destinationIndex) {
   		case 0:
-    		// code block
-    		break;
-  		case 1:
+			case 1:
 			case 2:
 			case 3:
-			case 4:
 				for (var i = 0; i < pillarsList.children.length; i++) {
 					pillarsList.children[i].classList.remove('active-pillar');
 				}
 				pillarsList.children[destinationIndex].classList.add('active-pillar');
     		break;
+			case 4:
 			case 5:
 			case 6:
 			case 7:
-			case 8:
 				for (var j = 0; j < valuesList.children.length; j++) {
 					valuesList.children[j].classList.remove('active-value');
 				}
@@ -37,7 +34,7 @@ $(document).ready(function() {
 				valuesList.classList.remove("value-" + origin.index);
 				valuesList.classList.add("value-" + destination.index);
 				break;
-			case 9:
+			case 8:
 			anime({
 				targets: '.TT__1',
 				translateX: [100, 250], // from 100 to 250
