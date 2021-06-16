@@ -12,19 +12,36 @@ $(document).ready(function() {
     var valuesList = document.getElementById('values-list');
     console.log(destination.index);
     var destinationIndex = destination.index - 1;
-    	if (destination.index > 0 && destination.index < 5) {
-      	for (var i = 0; i < pillarsList.children.length; i++) {
-        	pillarsList.children[i].classList.remove('active-pillar');
-      	}
-        pillarsList.children[destinationIndex].classList.add('active-pillar');
-      } else if (destination.index > 4 && destination.index < 9) {
-      	for (var j = 0; j < valuesList.children.length; j++) {
-        	valuesList.children[j].classList.remove('active-value');
-      	}
-        valuesList.children[destinationIndex-4].classList.add('active-value');
-        valuesList.classList.remove("value-" + origin.index);
-        valuesList.classList.add("value-" + destination.index);
-      }
+
+		switch(destinationIndex) {
+  		case 0:
+    		// code block
+    		break;
+  		case 1:
+			case 2:
+			case 3:
+			case 4:
+				for (var i = 0; i < pillarsList.children.length; i++) {
+					pillarsList.children[i].classList.remove('active-pillar');
+				}
+				pillarsList.children[destinationIndex].classList.add('active-pillar');
+    		break;
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+				for (var j = 0; j < valuesList.children.length; j++) {
+					valuesList.children[j].classList.remove('active-value');
+				}
+				valuesList.children[destinationIndex-4].classList.add('active-value');
+				valuesList.classList.remove("value-" + origin.index);
+				valuesList.classList.add("value-" + destination.index);
+				break;
+			case 9:
+				break;
+  		default:
+    		// code block
+		}
     },
     afterLoad: function(origin, destination, direction){
 		var loadedSection = this;
