@@ -35,16 +35,8 @@ $(document).ready(function() {
 				valuesList.classList.add("value-" + destination.index);
 				break;
 			case 8:
-			console.log("start animation");
-			var imageTT = document.getElementById('TT__1');
-			console.log(imageTT);
-			anime({
-				targets: imageTT,
-				translateX: [100, 250], // from 100 to 250
-				delay: 500,
-				direction: 'alternate',
-				loop: true
-			});
+				console.log("start animation");
+				animateTT(destination.index - origin.index);
 				break;
   		default:
     		// code block
@@ -278,3 +270,16 @@ module.exports = computedStyle;
     return el;
   };
 })();
+
+function animateTT(direction) {
+	console.log("Animate");
+	var distance = direction*window.innerHeight/3*2;
+	anime({
+		targets: ['.tt__1', '.tt__2'],
+		translateY: [distance, 0], // from 100 to 250
+		opacity: [0, 1],
+		duration: 1000,
+		delay: anime.stagger(100, {start: 250}),
+		easing: 'spring(1, 90, 17, 0)'
+	});
+}
