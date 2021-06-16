@@ -36,8 +36,10 @@ $(document).ready(function() {
 				break;
 			case 8:
 			console.log("start animation");
+			var imageTT = document.getElementById('TT__1');
+			console.log(imageTT);
 			anime({
-				targets: '.TT__1',
+				targets: imageTT,
 				translateX: [100, 250], // from 100 to 250
 				delay: 500,
 				direction: 'alternate',
