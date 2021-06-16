@@ -38,6 +38,13 @@ $(document).ready(function() {
 				valuesList.classList.add("value-" + destination.index);
 				break;
 			case 9:
+			anime({
+				targets: '.TT__1',
+				translateX: [100, 250], // from 100 to 250
+				delay: 500,
+				direction: 'alternate',
+				loop: true
+			});
 				break;
   		default:
     		// code block
