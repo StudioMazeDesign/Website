@@ -35,6 +35,7 @@ $(document).ready(function() {
 				valuesList.classList.add("value-" + destination.index);
 				break;
 			case 8:
+			console.log("start animation");
 			anime({
 				targets: '.TT__1',
 				translateX: [100, 250], // from 100 to 250
