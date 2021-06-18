@@ -35,14 +35,10 @@ $(document).ready(function() {
 				valuesList.classList.add("value-" + destination.index);
 				break;
 			case 8:
-			console.log("start animation");
-			anime({
-				targets: '.TT__1',
-				translateX: [100, 250], // from 100 to 250
-				delay: 500,
-				direction: 'alternate',
-				loop: true
-			});
+				animateTT(destination.index - origin.index);
+				break;
+			case 9:
+				animateLP(destination.index - origin.index);
 				break;
   		default:
     		// code block
@@ -276,3 +272,34 @@ module.exports = computedStyle;
     return el;
   };
 })();
+
+function animateTT(direction) {
+	console.log("Animate");
+	var distance = direction*window.innerHeight/3*2;
+	anime({
+		targets: ['.tt__1', '.tt__2'],
+		translateY: [distance, 0], // from 100 to 250
+		opacity: [0, 1],
+		duration: 1000,
+		delay: anime.stagger(100, {start: 250}),
+		easing: 'spring(1, 90, 17, 0)'
+	});
+}
+
+function animateLP(direction) {
+	console.log("Animate");
+	var distance = direction*window.innerHeight/3*2;
+	anime({
+		targets: ['.lp__left', '.lp__right'],
+		translateY: [distance, 0], // from 100 to 250
+		opacity: [0, 1],
+		duration: 1000,
+		delay: anime.stagger(100, {start: 250}),
+		easing: 'spring(1, 90, 17, 0)'
+	});
+	anime({
+		targets: 'lp__lemon',
+		rotate: 360,
+		duration: 5000
+	});
+}
