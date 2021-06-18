@@ -310,7 +310,7 @@ html.fp-enabled,
     transition-delay: 0s;
 }
 
-a.footer-focus {
+a.footer-focus, p.footer-focus {
 		color: #ebe9e3;
 }
 
