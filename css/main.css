@@ -279,7 +279,7 @@ html.fp-enabled,
 }
 
 .valeur-short-description {
-		transition: max-height 250ms ease-in-out;
+		transition: all 250ms ease-in-out;
     transition-delay: 200ms;
 }
 }
