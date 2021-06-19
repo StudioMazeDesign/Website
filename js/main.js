@@ -64,9 +64,10 @@ $(document).ready(function() {
       	svg.classList.add("footer-focus");
       }
       var menuItems = document.getElementsByClassName('menu-link');
-  for (var item = 0; item < menuItems.length; item++) {
-  	menuItems[item].classList.add('footer-focus');
-  }
+  		for (var item = 0; item < menuItems.length; item++) {
+  			menuItems[item].classList.add('footer-focus');
+  		}
+			document.getElementById('footer-title').classList.add('footer-focus');
 		}
     //using anchorLink
 		if(origin.anchor == 'footer'){
@@ -76,9 +77,10 @@ $(document).ready(function() {
       	svg.classList.remove("footer-focus");
       }
       var menuItems = document.getElementsByClassName('menu-link');
-  for (var item = 0; item < menuItems.length; item++) {
-  	menuItems[item].classList.remove('footer-focus');
-  }
+  		for (var item = 0; item < menuItems.length; item++) {
+  			menuItems[item].classList.remove('footer-focus');
+  		}
+			document.getElementById('footer-title').classList.remove('footer-focus');
 		}
 	}
 	});
