@@ -295,6 +295,7 @@ function animateLP(direction) {
 	// Create a timeline with default parameters
 var tl = anime.timeline({
   easing: 'spring(1, 90, 17, 0)',
+	opacity: [0, 1],
   duration: 1000
 });
 
