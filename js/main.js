@@ -290,12 +290,11 @@ function animateTT(direction) {
 
 function animateLP(direction) {
 	console.log("Animate");
-	var distance = direction*window.innerHeight/3*2;
+	var distance = direction*window.innerHeight;
 	var otherDistance = -1 * distance;
 	// Create a timeline with default parameters
 var tl = anime.timeline({
   easing: 'spring(1, 90, 17, 0)',
-	opacity: [0, 1],
   duration: 1000
 });
 
@@ -303,9 +302,11 @@ tl
 .add({
   targets: '.lp__left',
   translateY: [distance, 0],
+	opacity: [0, 1]
 })
 .add({
   targets: '.lp__right',
   translateY: [otherDistance, 0],
+	opacity: [0, 1]
 }, 0) // relative offset
 }
