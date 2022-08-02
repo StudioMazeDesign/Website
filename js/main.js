@@ -5,7 +5,7 @@ $(document).ready(function () {
     scrollBar: true,
     scrollingSpeed: 600,
     recordHistory: false,
-    paddingTop: '3.5em',
+    paddingTop: '3.5rem',
     onLeave: function (origin, destination, direction) {
       var leavingSection = this;
       var pillarsList = document.getElementById('list-pillars');
